@@ -22,9 +22,18 @@ function Navigation() {
         </div>
         <div className='flex  ml-[180px] space-x-[20px]'>
           <div className='flex space-x-[20px] mt-[8px]'>
-          <FaFacebook className='text-gray-600 h-[30px] w-[30px]' />
-          <FaInstagram className='text-gray-600 h-[30px] w-[30px]' />
-          <AiFillTikTok className='text-gray-600 h-[30px] w-[30px]' />
+            <NavLink to="https://www.facebook.com/" target='_blank'>
+              <FaFacebook className='text-gray-600 h-[30px] w-[30px]' />
+            </NavLink>
+
+            <NavLink to="https://www.instagram.com/accounts/login/?hl=en" target='_blank'>
+              <FaInstagram className='text-gray-600 h-[30px] w-[30px]' />
+            </NavLink>
+
+            <NavLink to="https://www.tiktok.com/login" target='_blank'>
+              <AiFillTikTok className='text-gray-600 h-[30px] w-[30px]' />
+            </NavLink>
+
           </div>
           <NavLink to='/contactus'>
             <button className='border h-[40px] w-[120px] rounded-[50px] bg-orange-500 hover:bg-orange-800 text-white'>Contact Us</button>

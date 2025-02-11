@@ -13,6 +13,7 @@ import image7 from '../assets/About/image7.png'
 import image8 from '../assets/About/image8.png'
 import { FiArrowLeftCircle } from "react-icons/fi";
 import { FiArrowRightCircle } from "react-icons/fi";
+import { NavLink } from 'react-router-dom';
 
 
 function AboutUs() {
@@ -35,8 +36,12 @@ function AboutUs() {
         <div className='ml-[110px] text-white pt-[350px]'>
           <h1 className='text-[40px] font-bold'>Process behind the making</h1>
           <p>See how we make momos that you like from only the best ingredients</p>
-          <button className='flex justify-center items-center gap-4 w-[231px] h-[64px] bg-teal-600 rounded-[100px] text-[16px] mt-[50px] hover:bg-teal-800'>
-            <FaPlayCircle className='h-[32px] w-[32px]' /> Watch the Video</button>
+
+         <NavLink to = "https://www.youtube.com/watch?v=uJlIncioJVI" target='_blank'>
+         <button className='flex justify-center items-center gap-4 w-[231px] h-[64px] bg-teal-600 rounded-[100px] text-[16px] mt-[50px] hover:bg-teal-800'>
+         <FaPlayCircle className='h-[32px] w-[32px]' /> Watch the Video</button>
+         </NavLink>
+         
         </div>
       </div>
 
