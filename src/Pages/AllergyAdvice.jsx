@@ -3,6 +3,15 @@ import advice1 from '../assets/Advice/advice1.png'
 import advice2 from '../assets/Advice/advice2.png'
 import advice4 from '../assets/Advice/advice4.png'
 import advice3 from '../assets/Advice/advice3.png'
+import advice5 from '../assets/Advice/advice5.png'
+import momo from '../assets/Image/momo.png'
+import { ImMobile } from "react-icons/im";
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { AiFillTikTok } from "react-icons/ai";
+import { FaLinkedin } from "react-icons/fa";
+import { FaSquareTwitter } from "react-icons/fa6";
+import { IoLogoYoutube } from "react-icons/io";
 
 function AllergyAdvice() {
   return (
@@ -111,32 +120,84 @@ function AllergyAdvice() {
       </div>
       <div className='flex flex-col justify-center items-center  '>
         <h1 className='text-orange-600 text-[40px] font-chela'>Allergy <span className='text-black'>Advice</span></h1>
-        <p className='w-[1000px]'>Lorem ipsum dolor sit amet consectetur. Feugiat lectus sit est blandit in gravida.
+        <p className='w-[1000px] mt-[50px] flex flex-col gap-8 text-gray-700'>Lorem ipsum dolor sit amet consectetur. Feugiat lectus sit est blandit in gravida.
           Nisl facilisis luctus sit porttitor placerat purus tincidunt. Cursus nascetur a mauris odio quis sociis pretium nisl.
           In viverra diam dis montes orci congue vulputate magna ullamcorper.
           Semper tellus ipsum felis maecenas ultrices turpis amet euismod malesuada.
           Amet sed neque vitae malesuada quis sed urna. Feugiat orci feugiat cursus risus tincidunt.
           Aliquet nam iaculis bibendum tortor varius sit. Volutpat nunc nisl quisque elit.
-          Ac est ultricies risus et sed. Donec auctor tristique quam morbi pellentesque et.
-          Scelerisque dui id arcu laoreet iaculis nunc et nulla sed.
-          Aliquet nullam vulputate quis ut mi placerat auctor. Ipsum massa suspendisse netus mollis interdum.
-          Augue leo eget ut vitae maecenas ac. Metus massa nunc tristique donec dignissim aenean congue justo et.
-          Parturient elit adipiscing non vitae mattis. Congue senectus urna cursus nisi nisl nisl tincidunt rhoncus.
-          Congue sit etiam vestibulum elit aenean leo enim volutpat.
-          Aliquet vitae condimentum bibendum ullamcorper vel cursus libero netus bibendum. Lorem id ut proin tincidunt.
-          Nibh nunc amet odio est et. Sem dui nunc morbi leo quisque viverra ultrices. Mattis at tempus ultricies ut feugiat nunc dignissim.
-          Urna turpis purus turpis elit risus. Sed elit ornare senectus dignissim diam dolor sed dictum.
-          Faucibus mauris senectus odio blandit diam nunc. Urna volutpat ut potenti ut mus orci neque sem.
-          Mattis amet at amet faucibus nisl morbi aenean ac. Justo turpis bibendum donec lacinia.
-          Enim integer ornare nibh urna enim tortor arcu sit lacinia. Dapibus praesent vitae dolor cursus fringilla hac facilisis pellentesque.
-          Elementum lacus varius et neque amet aliquam donec sed. Ultrices euismod commodo id vehicula commodo.
-          Amet lorem eros nulla mauris. Sit arcu enim sit nunc mi sed aenean. Ornare enim vitae volutpat est dui tortor.
-          Viverra habitant et consequat vitae elit aliquet iaculis in tristique. Quam ipsum viverra ac laoreet platea in praesent.
-          Mattis molestie arcu nulla convallis interdum proin dui ut porta. Amet potenti praesent pulvinar scelerisque vitae habitant eget.
+          <span> Ac est ultricies risus et sed. Donec auctor tristique quam morbi pellentesque et.
+            Scelerisque dui id arcu laoreet iaculis nunc et nulla sed.
+            Aliquet nullam vulputate quis ut mi placerat auctor. Ipsum massa suspendisse netus mollis interdum.
+            Augue leo eget ut vitae maecenas ac. Metus massa nunc tristique donec dignissim aenean congue justo et.
+            Parturient elit adipiscing non vitae mattis. Congue senectus urna cursus nisi nisl nisl tincidunt rhoncus.
+            Congue sit etiam vestibulum elit aenean leo enim volutpat.
+          </span>
+          <span>
+            Aliquet vitae condimentum bibendum ullamcorper vel cursus libero netus bibendum. Lorem id ut proin tincidunt.
+            Nibh nunc amet odio est et. Sem dui nunc morbi leo quisque viverra ultrices. Mattis at tempus ultricies ut feugiat nunc dignissim.
+            Urna turpis purus turpis elit risus. Sed elit ornare senectus dignissim diam dolor sed dictum.
+            Faucibus mauris senectus odio blandit diam nunc. Urna volutpat ut potenti ut mus orci neque sem.
+            Mattis amet at amet faucibus nisl morbi aenean ac. Justo turpis bibendum donec lacinia.
+            Enim integer ornare nibh urna enim tortor arcu sit lacinia. Dapibus praesent vitae dolor cursus fringilla hac facilisis pellentesque.
+            Elementum lacus varius et neque amet aliquam donec sed. Ultrices euismod commodo id vehicula commodo.
+            Amet lorem eros nulla mauris. Sit arcu enim sit nunc mi sed aenean. Ornare enim vitae volutpat est dui tortor.
+            Viverra habitant et consequat vitae elit aliquet iaculis in tristique. Quam ipsum viverra ac laoreet platea in praesent.
+            Mattis molestie arcu nulla convallis interdum proin dui ut porta.
+          </span> Amet potenti praesent pulvinar scelerisque vitae habitant eget.
           Senectus hac id aliquam ipsum urna. Est ut amet nec sollicitudin nunc viverra nec ipsum suspendisse.
           Etiam risus ultricies dictum nisl. Bibendum ultrices elementum feugiat erat suspendisse mi fermentum magna suspendisse.
           Nisi mattis consequat nec donec eu amet nulla a. At blandit vulputate morbi tortor amet.
           Hac nec gravida tempor ac. Senectus nunc libero scelerisque quisque. Risus condimentum mattis massa integer.</p>
+
+        <div className='h-[442px] w-[1000px] bg-gray-100 mt-15 rounded-[16px] flex flex-col justify-center items-center'>
+          <h1 className='text-[31px] text-teal-700'>Scan the QR code</h1>
+          <p className='text-gray-500'>You can also check the allergy advices using your phone as well</p>
+          <div className='mt-[40px]'>
+            <img src={advice5} alt="" className='h-[168px] w-[168px] border-4 rounded-[12px]' />
+            <h1 className='flex text-orange-600 text-[30px] font-bold'>SCAN <span className='text-black'>ME!</span><ImMobile className='text-black mt-[10px]' /> </h1>
+          </div>
+        </div>
+      </div>
+
+      <div className='mt-[40px] h-[400px] bg-gray-100 p-[50px]'>
+        <div className=' flex justify-between items-center w-[1128px] h-[200px]'>
+          <div className='w-[408px] h-[192px]'>
+            <img src={momo} alt="" className='w-[152px] h-[48px]' />
+            <p className='text-gray-500'>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Cupiditate nisi iusto unde quis quibusdam impedit ex facilis doloremque quaerat laudantium.</p>
+          </div>
+          <div className='w-[168px] h-[158px] flex flex-col justify-center'>
+            <h1 className='text-[25px] text-teal-700'>Momos</h1>
+            <h3>About Us</h3>
+            <h3>Our Menu</h3>
+            <h3>Our Services</h3>
+            <h3>Contact Us</h3>
+          </div>
+          <div className='w-[168px] h-[158px] flex flex-col items-start'>
+            <h1 className='text-[25px] text-teal-700'>Legals</h1>
+            <h3>Terms & Conditions</h3>
+            <h3>Privacy Policy</h3>
+            <h3>Supports</h3>
+          </div>
+          <div className='w-[168px] h-[158px] space-y-2' >
+            <h1 className='text-[25px] text-teal-700'>Follow Us</h1>
+            <div className='flex gap-3'>
+              <FaFacebook className='h-[35px] w-[35px] text-gray-500' />
+              <FaLinkedin className='h-[35px] w-[35px] text-gray-500' />
+              <FaSquareTwitter className='h-[35px] w-[35px] text-gray-500' />
+            </div>
+            <div className='flex gap-3'>
+              <IoLogoYoutube className='h-[35px] w-[35px] text-gray-500' />
+              <FaInstagram className='h-[35px] w-[35px] text-gray-500' />
+              <AiFillTikTok className='h-[35px] w-[35px] text-gray-500' />
+            </div>
+          </div>
+        </div>
+        <div className='border-b-1 border-gray-500 mt-[50px]'></div>
+        <div>
+          <h1 className='text-gray-500 flex justify-center mt-[30px]'>Copyright ©2025 Everest Momo Pvt Ltd. All Rights Reserved.</h1>
+        </div>
       </div>
 
     </div>

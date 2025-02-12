@@ -10,6 +10,9 @@ import { FaPlayCircle } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { AiFillTikTok } from "react-icons/ai";
+import { FaLinkedin } from "react-icons/fa";
+import { FaSquareTwitter } from "react-icons/fa6";
+import { IoLogoYoutube } from "react-icons/io";
 import { NavLink } from 'react-router-dom'
 
 
@@ -81,7 +84,6 @@ function OurServices() {
       </div>
 
       <div className='mt-[40px] h-[400px] bg-gray-100 p-[50px]'>
-
         <div className=' flex justify-between items-center w-[1128px] h-[200px]'>
           <div className='w-[408px] h-[192px]'>
             <img src={momo} alt="" className='w-[152px] h-[48px]' />
@@ -105,22 +107,20 @@ function OurServices() {
             <h1 className='text-[25px] text-teal-700'>Follow Us</h1>
             <div className='flex gap-3'>
               <FaFacebook className='h-[35px] w-[35px] text-gray-500' />
-              <FaInstagram className='h-[35px] w-[35px] text-gray-500' />
-              <AiFillTikTok className='h-[35px] w-[35px] text-gray-500' />
+              <FaLinkedin className='h-[35px] w-[35px] text-gray-500' />
+              <FaSquareTwitter className='h-[35px] w-[35px] text-gray-500' />
             </div>
             <div className='flex gap-3'>
-              <FaFacebook className='h-[35px] w-[35px] text-gray-500' />
+              <IoLogoYoutube className='h-[35px] w-[35px] text-gray-500' />
               <FaInstagram className='h-[35px] w-[35px] text-gray-500' />
               <AiFillTikTok className='h-[35px] w-[35px] text-gray-500' />
             </div>
           </div>
         </div>
-
         <div className='border-b-1 border-gray-500 mt-[50px]'></div>
         <div>
           <h1 className='text-gray-500 flex justify-center mt-[30px]'>Copyright ©2025 Everest Momo Pvt Ltd. All Rights Reserved.</h1>
         </div>
-
       </div>
 
     </div>
