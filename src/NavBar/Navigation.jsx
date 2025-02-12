@@ -22,7 +22,7 @@ function Navigation() {
         </div>
         <div className='flex  ml-[180px] space-x-[20px]'>
           <div className='flex space-x-[20px] mt-[8px]'>
-            <NavLink to="https://www.facebook.com/" target='_blank'>
+            <NavLink to="https://www.facebook.com/login.php/" target='_blank'>
               <FaFacebook className='text-gray-600 h-[30px] w-[30px]' />
             </NavLink>
 

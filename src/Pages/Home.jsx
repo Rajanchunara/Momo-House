@@ -43,10 +43,20 @@ function Home() {
             With a cozy ambiance, friendly service, and a menu full of mouthwatering options,
             we create a dining experience that feels like home. Come taste the love in every bite!</p>
           <button className='flex justify-center items-center border h-[55px] w-[220px] rounded-[50px] bg-teal-900 text-white hover:bg-teal-950 mt-[40px]' >Explore Our Story <HiMiniArrowLongRight className='mt-[5px] ml-[5px] text-2xl' /></button>
-
         </div>
       </div>
 
+      <div className='ml-[110px] mt-[50px] h-[400px]'>
+        <div className='flex flex-col justify-center items-center'>
+          <h1 className='text-[39px] font-bold'>Our <span className='text-orange-500'> Most Popular</span> Recipes</h1>
+          <p className='text-[20px]'>Browse through a varieties of recipes with fresh ingredients selected only from the best places</p>
+        </div>
+        <div className='flex justify-center items-center mt-[40px] gap-[40px]'>
+          <button className='border border-gray-500 w-[125px] h-[50px] rounded-[50px]'>Buff</button>
+          <button className='border border-gray-500 w-[125px] h-[50px] rounded-[50px]'>Chiken</button>
+          <button className='border border-gray-500 w-[125px] h-[50px] rounded-[50px]'>Veg</button>
+        </div>
+      </div>
 
 
     </div >
