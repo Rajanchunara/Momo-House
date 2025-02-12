@@ -22,7 +22,6 @@ function App() {
         <Route path='/ourservices' element={<OurServices />} />
         <Route path='/productDescription/:id' element={<ProductDescription />} />
       </Routes>
-
     </div>
   )
 }
