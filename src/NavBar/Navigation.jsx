@@ -27,7 +27,7 @@ function Navigation() {
               <FaFacebook className='text-gray-600 h-[30px] w-[30px]' />
             </NavLink>
 
-            <NavLink to="https://www.instagram.com/accounts/login/?hl=en" target='_blank'>
+            <NavLink to="https://www.instagram.com/accounts/login" target='_blank'>
               <FaInstagram className='text-gray-600 h-[30px] w-[30px]' />
             </NavLink>
 
