@@ -4,23 +4,24 @@ import momo from '../assets/Image/momo.png'
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { AiFillTikTok } from "react-icons/ai";
+import { BsCart4 } from "react-icons/bs";
 
 function Navigation() {
   return (
-    <div className='p-0.5'>
-      <div className='h-[70px] shadow-2xs shadow-gray-300  pl-[110px] flex items-center bg-white'>
-        <NavLink to='/'>
-          <div>
+    <div>
+      <div className='h-[90px] shadow-2xs shadow-gray-300  pl-[110px] flex items-center justify-center bg-white'>
+      <div>
             <img src={momo} alt="" className='h-[45px]' />
           </div>
-        </NavLink>
-        <div className='pl-[50px] space-x-[30px]'>
+        <div className='pl-[20px] space-x-[30px] flex'>
+        <NavLink to='/' className='hover:text-orange-500 text-gray-500'>Home</NavLink>
           <NavLink to='/aboutus' className='hover:text-orange-500 text-gray-500'>About Us</NavLink>
           <NavLink to='/ourmenu' className='hover:text-orange-500 text-gray-500' >Our Menu</NavLink>
           <NavLink to='/ourservices' className='hover:text-orange-500 text-gray-500'>Our Services</NavLink>
           <NavLink to='/allergyadvice' className='hover:text-orange-500 text-gray-500'>Allergy Advice</NavLink>
+          <NavLink to='/cartpage' className='hover:text-orange-500 text-gray-500'><BsCart4 className='w-[50px] h-[35px] ' /></NavLink>
         </div>
-        <div className='flex  ml-[180px] space-x-[20px]'>
+        <div className='flex  ml-[100px] space-x-[20px]'>
           <div className='flex space-x-[20px] mt-[8px]'>
             <NavLink to="https://www.facebook.com/login.php/" target='_blank'>
               <FaFacebook className='text-gray-600 h-[30px] w-[30px]' />
