@@ -18,7 +18,7 @@ let cartReducer = (state, action) => {
                 return item.id === action.payload.id;
             })
             if (isExisting) {
-                return
+                return state;
             } else {
                 const newProduct = { ...action.payload, qty: 1 }
                 // console.log(newProduct);
