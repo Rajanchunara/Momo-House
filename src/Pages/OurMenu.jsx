@@ -18,7 +18,7 @@ function OurMenu() {
   const getData = async () => {
     let response = await fetch("https://dummyjson.com/recipes")
     response = await response.json();
-    console.log(response.recipes);
+    // console.log(response.recipes);
     setProduct(response.recipes)
   };
   useEffect(() => {

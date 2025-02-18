@@ -17,7 +17,7 @@ function ProductDescription() {
         try {
             let response = await fetch(`https://dummyjson.com/recipes/${id}`);
             response = await response.json();
-            console.log(response);
+            // console.log(response);
             setProduct(response);
             setIngredients(response.ingredients);
             setInstructions(response.instructions);

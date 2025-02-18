@@ -2,8 +2,8 @@ import React, { useContext } from 'react'
 import { CartContext } from '../Context/CartContext/CartProvider'
 
 function CartPage() {
-    const data =useContext(CartContext)
-    console.log(data);
+  const {state} = useContext(CartContext)
+  console.log(state);
   return (
     <div>CartPage</div>
   )
