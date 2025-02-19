@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { CartContext } from "../Context/CartContext/CartProvider";
 import { RiSubtractFill } from "react-icons/ri";
 import { IoAdd } from "react-icons/io5";
+import { FaStar } from "react-icons/fa6";
 
 function ProductDescription() {
 
@@ -33,7 +34,7 @@ function ProductDescription() {
 
             {product ? (
                 <div>
-                    <h1 className="text-[40px] underline flex justify-center mt-[40px]">{product.name}</h1>
+                    <h1 className="text-[40px] underline flex justify-center mt-[40px] text-red-500">{product.name}</h1>
                     <div className="mt-[30px] flex justify-center">
                         <div className="mr-14">
                             <img src={product.image} alt="" className="h-[400px] rounded-[20px] border border-gray-400 shadow-2xl shadow-gray-600" />
@@ -41,15 +42,15 @@ function ProductDescription() {
                         <div className="space-y-2 flex flex-col justify-center">
                             <h1 className="text-[30px] font-bold">{product.name}</h1>
                             <p className="text-[20px]">Cuisine: {product.cuisine}</p>
-                            <p className="text-[20px]">Rating: {product.rating}</p>
-                            <p className="text-[25px] text-orange-600">Rs. {product.caloriesPerServing}</p>
+                            <p className="text-[20px] flex gap-2">Rating: {product.rating}<FaStar className="mt-[5px] text-amber-500" /></p>
+                            <p className="text-[25px] text-red-500">Rs. {product.caloriesPerServing}</p>
                             <div className="space-x-3 flex mt-[10px]">
                                 <button className="bg-blue-500 w-[50px] h-[35px] rounded-[10px] flex justify-center items-center"><RiSubtractFill className="text-[30px]" /></button>
                                 <span className="text-[30px]">{12}</span>
                                 <button className="bg-blue-500 w-[50px] h-[35px] rounded-[10px] flex justify-center items-center"><IoAdd className="text-[30px]" /></button>
                             </div>
                             <div>
-                                <button className="bg-sky-600   p-3 m-2 text-white hover:bg-sky-700">
+                                <button className="bg-sky-600   p-3 m-2 text-white hover:bg-sky-700 rounded-[6px]">
                                     Buy Now{" "}
                                 </button>
                                 <button
@@ -57,7 +58,7 @@ function ProductDescription() {
                                         dispatch({ type: "AddToCart", payload: product })
                                     }}
 
-                                    className="  bg-orange-600 p-3  m-2  text-white hover:bg-amber-700">
+                                    className="  bg-orange-600 p-3  m-2  text-white hover:bg-amber-700 rounded-[6px]">
                                     Add To Cart{" "}
                                 </button>
                             </div>

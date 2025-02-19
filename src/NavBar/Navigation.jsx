@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import momo from '../assets/Image/momo.png'
 import { FaFacebook } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagramSquare } from "react-icons/fa";
 import { AiFillTikTok } from "react-icons/ai";
 import { BsCart4 } from "react-icons/bs";
 import { CartContext } from '../Context/CartContext/CartProvider';
@@ -33,22 +33,22 @@ function Navigation() {
           <NavLink to='/cartpage' className=' text-gray-500'>
 
             <span className='absolute ml-[25px] top-[18px] z-50 text-white border w-[25px] flex justify-center bg-red-500 rounded-[50px]'>{totalCartItem}</span>
-            <BsCart4 className='w-[50px] h-[35px] ' /></NavLink>
+            <BsCart4 className='w-[50px] h-[35px] hover:text-orange-600 ' /></NavLink>
 
 
         </div>
         <div className='flex  ml-[100px] space-x-[20px]'>
           <div className='flex space-x-[20px] mt-[8px]'>
             <NavLink to="https://www.facebook.com/login.php/" target='_blank'>
-              <FaFacebook className='text-gray-600 h-[30px] w-[30px]' />
+              <FaFacebook className='text-gray-600 h-[30px] w-[30px] hover:text-blue-500' />
             </NavLink>
 
             <NavLink to="https://www.instagram.com/accounts/login" target='_blank'>
-              <FaInstagram className='text-gray-600 h-[30px] w-[30px]' />
+              <FaInstagramSquare className='text-gray-600 h-[30px] w-[30px] hover:text-pink-500' />
             </NavLink>
 
             <NavLink to="https://www.tiktok.com/login" target='_blank'>
-              <AiFillTikTok className='text-gray-600 h-[30px] w-[30px]' />
+              <AiFillTikTok className='text-gray-600 h-[30px] w-[30px] hover:text-black' />
             </NavLink>
 
           </div>

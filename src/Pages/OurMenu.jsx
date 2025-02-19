@@ -9,6 +9,8 @@ import { AiFillTikTok } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareTwitter } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io";
+import { FaStar } from "react-icons/fa6";
+
 
 
 function OurMenu() {
@@ -52,14 +54,15 @@ function OurMenu() {
           <div className='flex p-[30px] flex-wrap gap-8 justify-center'>
             {product.map((item) => {
               return (
-                <div key={item.name} className='border border-gray-400 h-[400px] w-[320px] flex flex-col justify-center items-center shadow-2xl shadow-gray-700 rounded-[20px]' >
+                <div key={item.name} className='border border-gray-400 h-[420px] w-[340px] flex flex-col justify-center items-center shadow-2xl shadow-gray-700 rounded-[20px]' >
                   <img src={item.image} alt="" className='h-[240px] rounded-2xl ' />
                   <h1 className='mt-[20px] font-bold'>{item.name}</h1>
+                  <h1 className='flex gap-2'>Rating: {item.rating}<FaStar className="mt-[5px] text-amber-500" /></h1>
                   <h1 className='text-red-600'>Rs: {item.caloriesPerServing}</h1>
                   <NavLink
                     key={item.name}
                     to={`/ProductDescription/${item.id}`}>
-                    <button className='mt-[20px] h-[50px] w-[150px] rounded-[50px] bg-orange-500 text-white hover:bg-amber-700'>View More</button>
+                    <button className='mt-[10px] h-[50px] w-[150px] rounded-[50px] bg-orange-500 text-white hover:bg-amber-700'>View More</button>
                   </NavLink>
                 </div>
               )
