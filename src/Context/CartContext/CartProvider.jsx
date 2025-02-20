@@ -1,4 +1,6 @@
 import { createContext, useReducer } from "react";
+import { toast, Bounce } from "react-toastify";
+
 
 export const CartContext = createContext()
 
@@ -11,9 +13,6 @@ let cartReducer = (state, action) => {
 
     switch (action.type) {
         case 'AddToCart': {
-
-
-
             const isExisting = state.cartItem.find((item) => {
                 return item.id === action.payload.id;
             })
@@ -22,9 +21,19 @@ let cartReducer = (state, action) => {
             } else {
                 const newProduct = { ...action.payload, qty: 1 }
                 // console.log(newProduct);
-
-
                 let newCartItem = [...state.cartItem, newProduct]
+
+                toast.success(`${action.payload.name} is added to cart`, {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: false,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    transition: Bounce,
+                });
                 console.log(newCartItem);
                 return {
                     ...state,
@@ -36,16 +45,33 @@ let cartReducer = (state, action) => {
             break;
         }
 
-        case 'RemoveToItem': {
-            break;
+        case 'RemoveItem': {
+            const filterCartItem = state.cartItem.filter((item) => {
+                return item.id !== action.payload.id
+            })
+            return {
+                ...state,
+                cartItem: filterCartItem,
+            }
         }
 
         case 'Increment': {
-            break;
+
+            const newCartItem = state.cartItem.map((item) => {
+                return item.id === action.payload.id ? { ...item, qty: item.qty + 1 } : item;
+            })
+            return {
+                cartItem: newCartItem
+            }
         }
 
         case 'Decrement': {
-            break;
+            const newCartItem = state.cartItem.map((item) => {
+                return item.id === action.payload.id && item.qty > 1 ? { ...item, qty: item.qty - 1 } : item;
+            })
+            return {
+                cartItem: newCartItem
+            }
         }
 
         case 'ClearCart': {

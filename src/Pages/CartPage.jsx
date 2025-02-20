@@ -5,7 +5,7 @@ import { FaSquarePlus } from "react-icons/fa6";
 import { FaMinusSquare } from "react-icons/fa";
 
 function CartPage() {
-  const { state } = useContext(CartContext);
+  const { state, dispatch } = useContext(CartContext);
   console.log(state);
   return (
     <div>
@@ -26,15 +26,32 @@ function CartPage() {
                       </div>
                       <div className=" h-14 space-y-2">
                         <h1 className=" text-red-500 text-[30px]">  Rs. {item.caloriesPerServing}</h1>
-                        <button className="p-2 bg-orange-600 rounded-[6px] hover:bg-orange-800 text-white">
+                        <button
+                          onClick={() => {
+                            dispatch({
+                              type: "RemoveItem", payload: { id: item.id },
+                            })
+                          }}
+
+                          className="p-2 bg-orange-600 rounded-[6px] hover:bg-orange-800 text-white">
                           {/* <MdDelete color="red" size={30} /> */}
                           Delete
                         </button>
                       </div>
                       <div className=" h-14 space-x-2 flex justify-center items-center">
-                        <button className="hover:text-gray-700"><FaMinusSquare size={30} /></button>
+                        <button
+                          onClick={() => {
+                            dispatch({ type: "Decrement", payload: { id: item.id } })
+                          }}
+
+                          className="hover:text-gray-700"><FaMinusSquare size={30} /></button>
                         <span className="text-[30px]">{item.qty}</span>
-                        <button  className="hover:text-gray-700"><FaSquarePlus size={30} /></button>
+                        <button
+                          onClick={() => {
+                            dispatch({ type: "Increment", payload: { id: item.id } })
+                          }}
+
+                          className="hover:text-gray-700"><FaSquarePlus size={30} /></button>
 
                       </div>
                     </div>
