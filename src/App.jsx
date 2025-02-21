@@ -9,6 +9,7 @@ import AllergyAdvice from './Pages/AllergyAdvice'
 import ProductDescription from './Pages/ProductDescription'
 import CartPage from './Pages/CartPage'
 import Navigation from './NavBar/Navigation'
+import Payment from './Pages/Payment'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path='/ourservices' element={<OurServices />} />
         <Route path='/productDescription/:id' element={<ProductDescription />} />
         <Route path='/cartpage' element={<CartPage />} />
+        <Route path='/payment' element={<Payment />} />
       </Routes>
     </div>
   )

@@ -11,11 +11,12 @@ function Navigation() {
 
 
   const { state } = useContext(CartContext)
-  console.log(state.cartItem);
+  // console.log(state.cartItem);
+
   const totalCartItem = state.cartItem.reduce((acc, item) => {
     return acc + item.qty;
   }, 0)
-  console.log(totalCartItem);
+  // console.log(totalCartItem);
 
 
   return (

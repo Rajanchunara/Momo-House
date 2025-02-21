@@ -12,6 +12,8 @@ let cartReducer = (state, action) => {
     // console.log(action);
 
     switch (action.type) {
+
+
         case 'AddToCart': {
             const isExisting = state.cartItem.find((item) => {
                 return item.id === action.payload.id;
@@ -25,7 +27,7 @@ let cartReducer = (state, action) => {
 
                 toast.success(`${action.payload.name} is added to cart`, {
                     position: "top-right",
-                    autoClose: 5000,
+                    autoClose: 1000,
                     hideProgressBar: false,
                     closeOnClick: false,
                     pauseOnHover: true,
@@ -40,10 +42,8 @@ let cartReducer = (state, action) => {
                     cartItem: newCartItem,
                 }
             }
-
-            // console.log(action.payload);
-            break;
         }
+
 
         case 'RemoveItem': {
             const filterCartItem = state.cartItem.filter((item) => {
@@ -55,6 +55,7 @@ let cartReducer = (state, action) => {
             }
         }
 
+
         case 'Increment': {
 
             const newCartItem = state.cartItem.map((item) => {
@@ -65,6 +66,7 @@ let cartReducer = (state, action) => {
             }
         }
 
+
         case 'Decrement': {
             const newCartItem = state.cartItem.map((item) => {
                 return item.id === action.payload.id && item.qty > 1 ? { ...item, qty: item.qty - 1 } : item;
@@ -74,17 +76,19 @@ let cartReducer = (state, action) => {
             }
         }
 
+
         case 'ClearCart': {
-            break;
+            return {
+                cartItem: []
+            }
         }
+
 
         default: {
             return state;
         }
     }
 }
-
-
 
 
 export const CartProvider = ({ children }) => {
