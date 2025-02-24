@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { CartContext } from "../Context/CartContext/CartProvider";
-import { RiSubtractFill } from "react-icons/ri";
-import { IoAdd } from "react-icons/io5";
+// import { RiSubtractFill } from "react-icons/ri";
+// import { IoAdd } from "react-icons/io5";
 import { FaStar } from "react-icons/fa6";
 
 function ProductDescription() {
@@ -44,11 +44,11 @@ function ProductDescription() {
                             <p className="text-[20px]">Cuisine: {product.cuisine}</p>
                             <p className="text-[20px] flex gap-2">Rating: {product.rating}<FaStar className="mt-[5px] text-amber-500" /></p>
                             <p className="text-[25px] text-red-500">Rs. {product.caloriesPerServing}</p>
-                            <div className="space-x-3 flex mt-[10px]">
+                            {/* <div className="space-x-3 flex mt-[10px]">
                                 <button className="bg-blue-500 w-[50px] h-[35px] rounded-[10px] flex justify-center items-center"><RiSubtractFill className="text-[30px]" /></button>
                                 <span className="text-[30px]">{12}</span>
                                 <button className="bg-blue-500 w-[50px] h-[35px] rounded-[10px] flex justify-center items-center"><IoAdd className="text-[30px]" /></button>
-                            </div>
+                            </div> */}
                             <div>
                                 <button className="bg-sky-600   p-3 m-2 text-white hover:bg-sky-700 rounded-[6px]">
                                     Buy Now{" "}
