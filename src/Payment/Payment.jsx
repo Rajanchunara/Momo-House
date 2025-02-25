@@ -3,26 +3,19 @@ import { v4 as uuidv4 } from "uuid";
 import { useLocation } from "react-router-dom";
 import CryptoJS from "crypto-js";
 
-
 function Payment() {
   const data = useLocation();
   let totalAmount = data.state.totalAmount;
   let totalItem = data.state.totalItem;
 
-
-
-
-
   let transaction_uuid = uuidv4();
+  // console.log(transaction_uuid);
 
-  console.log(transaction_uuid);
+  let Message = `total_amount=${totalAmount},transaction_uuid=${transaction_uuid},product_code=EPAYTEST`
 
-
-
-  var hash = CryptoJS.HmacSHA256("Message", "secret");
- var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);
- document.write(hashInBase64);
-
+  var hash = CryptoJS.HmacSHA256(Message, "8gBm/:&EnhH.1/q");
+  var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);
+  //document.write(hashInBase64);
 
   // console.log(data.state.totalAmount);
   // console.log(data.state.totalItem);
@@ -93,7 +86,7 @@ function Payment() {
           type="text"
           id="success_url"
           name="success_url"
-          value="https://developer.esewa.com.np/success"
+          value="http://localhost:5173/success"
           required
         />
 
@@ -101,7 +94,7 @@ function Payment() {
           type="text"
           id="failure_url"
           name="failure_url"
-          value="https://developer.esewa.com.np/failure"
+          value="http://localhost:5173/failure"
           required
         />
 
@@ -117,7 +110,7 @@ function Payment() {
           type="text"
           id="signature"
           name="signature"
-          value="i94zsd3oXF6ZsSr/kGqT4sSzYQzjj1W/waxjWyRwaME="
+          value={hashInBase64}
           required
         />
 
