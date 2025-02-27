@@ -12,6 +12,7 @@ import Navigation from './NavBar/Navigation'
 import Payment from './Payment/Payment'
 import Success from './Payment/Success'
 import Failure from './Payment/Failure'
+import Login from './Aurth/Login'
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path='/payment' element={<Payment />} />
         <Route path='/success' element={<Success />} />
         <Route path='/failure' element={<Failure />} />
+        <Route path='/login' element={<Login />} />
       </Routes>
     </div>
   )

@@ -25,7 +25,7 @@ function Navigation() {
         <div>
           <img src={momo} alt="" className='h-[45px]' />
         </div>
-        <div className='pl-[20px] space-x-[30px] flex'>
+        <div className='space-x-[20px] flex'>
           <NavLink to='/' className='hover:text-orange-500 text-gray-500'>Home</NavLink>
           <NavLink to='/aboutus' className='hover:text-orange-500 text-gray-500'>About Us</NavLink>
           <NavLink to='/ourmenu' className='hover:text-orange-500 text-gray-500' >Our Menu</NavLink>
@@ -35,6 +35,7 @@ function Navigation() {
 
             <span className='absolute ml-[25px] top-[18px] z-50 text-white border w-[25px] flex justify-center bg-red-500 rounded-[50px]'>{totalCartItem}</span>
             <BsCart4 className='w-[50px] h-[35px] hover:text-orange-600 ' /></NavLink>
+            <NavLink to='/login' className='hover:text-orange-500 text-gray-500'>Login</NavLink>
 
 
         </div>
