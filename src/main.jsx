@@ -5,11 +5,21 @@ import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import { CartProvider } from './Context/CartContext/CartProvider.jsx'
 import { Bounce, ToastContainer } from 'react-toastify';
+import { Auth0Provider } from '@auth0/auth0-react';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <CartProvider>
-      <App />
+
+    <Auth0Provider
+    domain="dev-wkqmchj3xikks4z7.us.auth0.com"
+    clientId="8CCnAiZSBRy8M3ZjzS221sNYTyoCUrCy"
+    authorizationParams={{
+      redirect_uri: window.location.origin
+    }}
+  >
+    <App />
+  </Auth0Provider>
       <ToastContainer
         position="top-right"
         autoClose={5000}

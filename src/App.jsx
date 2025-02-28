@@ -13,6 +13,7 @@ import Payment from './Payment/Payment'
 import Success from './Payment/Success'
 import Failure from './Payment/Failure'
 import Login from './Aurth/Login'
+import Profile from './Pages/Profile'
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path='/success' element={<Success />} />
         <Route path='/failure' element={<Failure />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/profile' element={<Profile />} />
       </Routes>
     </div>
   )
