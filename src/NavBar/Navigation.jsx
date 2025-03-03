@@ -58,8 +58,6 @@ function Navigation() {
             </span>
             <BsCart4 className="w-[50px] h-[35px] hover:text-orange-600 " />
           </NavLink>
-
-         
         </div>
         <div className="flex  ml-[100px] space-x-[20px]">
           <div className="flex space-x-[20px] mt-[8px]">
@@ -92,13 +90,11 @@ function Navigation() {
             <FaUser size={25} className="mt-2.5" />
           )}
 
-
-{isAuthenticated ? (
+          {isAuthenticated ? (
             <button
               onClick={() => {
                 logout();
               }}
-
               className="p-1.5 bg-orange-500 rounded-[50px] text-white"
             >
               Logout
