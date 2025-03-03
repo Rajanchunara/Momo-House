@@ -88,7 +88,7 @@ function Payment() {
           type="hidden"
           id="success_url"
           name="success_url"
-          value="http://localhost:5173/success"
+          value="https://momo-house-three.vercel.app/success"
           required
         />
 
@@ -96,7 +96,7 @@ function Payment() {
           type="hidden"
           id="failure_url"
           name="failure_url"
-          value="http://localhost:5173/failure"
+          value="https://momo-house-three.vercel.app/failure"
           required
         />
 
