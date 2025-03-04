@@ -95,14 +95,14 @@ function Navigation() {
               onClick={() => {
                 logout();
               }}
-              className="p-1.5 bg-orange-500 rounded-[50px] text-white"
+              className="p-1.5 bg-orange-500 rounded-[50px] text-white  hover:bg-orange-800"
             >
               Logout
             </button>
           ) : (
             <NavLink
               to="/login"
-              className="flex justify-center items-center w-[80px] bg-orange-500 rounded-[50px] text-white"
+              className="flex justify-center items-center w-[80px] bg-orange-500 rounded-[50px] text-white hover:bg-orange-800"
             >
               Login
             </NavLink>

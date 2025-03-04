@@ -2,8 +2,10 @@ import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { CartContext } from "../Context/CartContext/CartProvider";
 import { FaStar } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 function ProductDescription() {
+  const navigate = useNavigate();
   const { state, dispatch } = useContext(CartContext);
 
   const { id } = useParams();
@@ -52,9 +54,20 @@ function ProductDescription() {
                 Rs. {product.caloriesPerServing}
               </p>
               <div>
-                <button className="bg-sky-600   p-3 m-2 text-white hover:bg-sky-700 rounded-[6px]">
+                <button
+                  onClick={() => {
+                    navigate("/payment", {
+                      state: {
+                        totalAmount: product.caloriesPerServing,
+                        totalItem: 1,
+                      },
+                    });
+                  }}
+                  className="bg-sky-600   p-3 m-2 text-white hover:bg-sky-700 rounded-[6px]"
+                >
                   Buy Now{" "}
                 </button>
+
                 <button
                   onClick={() => {
                     dispatch({ type: "AddToCart", payload: product });
